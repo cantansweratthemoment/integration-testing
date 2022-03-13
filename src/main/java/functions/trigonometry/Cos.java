@@ -8,7 +8,7 @@ public class Cos {
 
     public BigDecimal calculateCos(double x, double eps) {
         BigDecimal cos = new BigDecimal(1);
-        cos = cos.subtract(sin.calculateSin(x, eps).pow(2)).sqrt(MathContext.DECIMAL32);
+        cos = cos.subtract(sin.calculateSin(x, eps).pow(2)).sqrt(MathContext.DECIMAL128);
         return cos;
     }
 }

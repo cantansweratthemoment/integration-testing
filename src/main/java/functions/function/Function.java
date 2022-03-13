@@ -16,7 +16,7 @@ public class Function {
     private final Sec sec = new Sec();
 
 
-    public BigDecimal calculateTrig(double x, double eps) throws ArithmeticException{
+    public BigDecimal calculateTrig(double x, double eps) throws ArithmeticException {
         BigDecimal answer = new BigDecimal(0);
         answer = answer.add(
                 new BigDecimal(0)
@@ -54,7 +54,7 @@ public class Function {
                                         .divide(csc.calculate(x, eps), RoundingMode.HALF_UP)
                                 , RoundingMode.HALF_UP
                         )
-                        .multiply(csc.calculate(x, eps))
+                        .multiply(cos.calculateCos(x, eps))
                         .add(
                                 new BigDecimal(0)
                                         .add(sin.calculateSin(x, eps))
@@ -81,6 +81,7 @@ public class Function {
                                                         .divide(cos.calculateCos(x, eps), RoundingMode.HALF_UP)
                                                 , RoundingMode.HALF_UP
                                         )
+
                         )
                         .subtract(sec.calculate(x, eps))
                         .pow(3)
@@ -88,6 +89,7 @@ public class Function {
                 .pow(2)
                 .pow(2)
                 .pow(3);
+
         return answer;
     }
 }

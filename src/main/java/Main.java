@@ -14,7 +14,7 @@ public class Main {
         Function function = new Function();
 
         try {
-            function.calculateTrig(x, eps);
+            System.out.println(function.calculateTrig(x, eps));
         }catch (ArithmeticException exception){
             System.out.println(exception.getMessage());
         }
