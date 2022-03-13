@@ -14,5 +14,6 @@ public class Main {
         FunctionCalculator logarithm = new Logarithm(x, eps);
 
         System.out.println(logarithm.calculate());
+        System.out.println(trigonometry.calculate());
     }
 }
