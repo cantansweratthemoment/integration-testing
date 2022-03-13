@@ -8,6 +8,10 @@ public class Ln {
 
     public BigDecimal calculate(double x, double eps) {
 
+        if(x <= 0){
+            throw new ArithmeticException("x is less than or equals to 0");
+        }
+
         BigDecimal constant = BigDecimal.valueOf(((x - 1) * (x - 1)) / ((x + 1) * (x + 1)));
 
         BigDecimal answer = new BigDecimal(0);
