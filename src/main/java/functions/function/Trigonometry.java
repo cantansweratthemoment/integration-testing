@@ -1,22 +1,20 @@
 package functions.function;
 
-import functions.trigonometry.*;
+import functions.aClass.FunctionCalculator;
 import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 @Getter
-public class Function {
-    private final Tan tan = new Tan();
-    private final Sin sin = new Sin();
-    private final Cos cos = new Cos();
-    private final Cot cot = new Cot();
-    private final Csc csc = new Csc();
-    private final Sec sec = new Sec();
+public class Trigonometry extends FunctionCalculator {
 
+    public Trigonometry(double x, double eps){
+        super(x, eps);
+    }
 
-    public BigDecimal calculateTrig(double x, double eps) throws ArithmeticException {
+    @Override
+    public BigDecimal calculate() throws ArithmeticException {
         BigDecimal answer = new BigDecimal(0);
         answer = answer.add(
                 new BigDecimal(0)
@@ -92,4 +90,6 @@ public class Function {
 
         return answer;
     }
+
+
 }

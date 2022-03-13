@@ -1,4 +1,4 @@
 package functions.logarithm;
 
-public class Logarithm {
+public class Ln {
 }

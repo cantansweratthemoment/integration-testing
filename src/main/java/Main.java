@@ -1,8 +1,7 @@
-import functions.function.Function;
-import functions.trigonometry.*;
+import functions.aClass.FunctionCalculator;
+import functions.function.Trigonometry;
+import functions.function.Logarithm;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class Main {
@@ -11,10 +10,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         double x = scanner.nextDouble();
         double eps = scanner.nextDouble();
-        Function function = new Function();
+        FunctionCalculator trigonometry = new Trigonometry(x, eps);
+        FunctionCalculator logarithm = new Logarithm(x, eps);
 
+        //todo: норм ввод и тд
         try {
-            System.out.println(function.calculateTrig(x, eps));
+            System.out.println(trigonometry.calculate());
         }catch (ArithmeticException exception){
             System.out.println(exception.getMessage());
         }
