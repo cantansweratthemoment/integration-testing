@@ -2,18 +2,14 @@ package functions.trigonometry;
 
 import functions.Number;
 
+import java.math.BigDecimal;
 import java.math.RoundingMode;
-
-import static java.lang.Math.*;
 
 public class Cot {
     Sin sin = new Sin();
     Cos cos = new Cos();
 
-    public Number calculate(double x, int eps) {
-        if (x % PI == 0) {
-            return new Number(null, true);
-        }
-        return new Number(cos.calculateCos(x, eps).divide(sin.calculateSin(x, eps), eps, RoundingMode.HALF_UP), false);
+    public BigDecimal calculate(double x, double eps) {
+        return cos.calculateCos(x, eps).divide(sin.calculateSin(x, eps),20, RoundingMode.HALF_UP);
     }
 }
