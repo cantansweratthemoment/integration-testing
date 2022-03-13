@@ -13,14 +13,6 @@ public class Main {
         FunctionCalculator trigonometry = new Trigonometry(x, eps);
         FunctionCalculator logarithm = new Logarithm(x, eps);
 
-        //todo: норм ввод и тд
-        try {
-            System.out.println(trigonometry.calculate());
-        }catch (ArithmeticException exception){
-            System.out.println(exception.getMessage());
-        }
+        System.out.println(logarithm.calculate());
     }
-
-
-
 }
