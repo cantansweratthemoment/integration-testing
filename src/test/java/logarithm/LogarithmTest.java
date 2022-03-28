@@ -12,7 +12,6 @@ import java.math.BigDecimal;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class LogarithmTest {
     private final Double accuracy = 0.0001;
     private final Ln ln = new Ln();

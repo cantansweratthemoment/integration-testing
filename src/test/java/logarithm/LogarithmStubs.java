@@ -22,7 +22,7 @@ public class LogarithmStubs {
     private static final Double accuracy = 0.01;
     private static final Ln ln = mock(Ln.class);
     private static final Log log = mock(Log.class);
-    public static final Logarithm logarithm = null;
+    public static final Logarithm logarithm = new Logarithm();
 
     private static void getLnMockDataFromCsv() throws IOException, CsvException {
         try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/logarithmMocks/ln.csv"))) {

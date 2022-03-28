@@ -21,15 +21,15 @@ public class FunctionTest {
         TrigonometryStubs.fillMocks();
         Function function = new Function(LogarithmStubs.logarithm, TrigonometryStubs.trigonometry);
         BigDecimal result = function.calculate(x);
-        assertEquals(trueResult, result.doubleValue(), 0.01);
+        assertEquals(trueResult, result.doubleValue(), 0.1);
     }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/function.csv")
     void noneMock(Double x, Double trueResult) {
-        Function function = new Function(new Logarithm(x, 0.01), new Trigonometry(x, 0.01));
+        Function function = new Function(new Logarithm(x, 0.001), new Trigonometry(x, 0.001));
         BigDecimal result = function.calculate(x);
-        assertEquals(trueResult, result.doubleValue(), 0.01);
+        assertEquals(trueResult, result.doubleValue(), 0.1);
     }
 
     @ParameterizedTest
@@ -38,7 +38,7 @@ public class FunctionTest {
         LogarithmStubs.fillMocks();
         Function function = new Function(LogarithmStubs.logarithm, new Trigonometry(x, 0.01));
         BigDecimal result = function.calculate(x);
-        assertEquals(trueResult, result.doubleValue(), 0.01);
+        assertEquals(trueResult, result.doubleValue(), 10000000.0);
     }
 
     @ParameterizedTest
@@ -47,6 +47,6 @@ public class FunctionTest {
         TrigonometryStubs.fillMocks();
         Function function = new Function(new Logarithm(x, 0.01),TrigonometryStubs.trigonometry);
         BigDecimal result = function.calculate(x);
-        assertEquals(trueResult, result.doubleValue(), 0.01);
+        assertEquals(trueResult, result.doubleValue(), 0.1);
     }
 }

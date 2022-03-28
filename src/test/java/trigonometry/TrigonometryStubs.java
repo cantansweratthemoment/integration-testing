@@ -25,7 +25,7 @@ public class TrigonometryStubs {
     private static final Sec sec = mock(Sec.class);
     private static final Sin sin = mock(Sin.class);
     private static final Tan tan = mock(Tan.class);
-    public static final Trigonometry trigonometry = null;
+    public static final Trigonometry trigonometry = new Trigonometry();
 
     private static void getCosMockDataFromCsv() throws IOException, CsvException {
         try (CSVReader csvReader = new CSVReader(new FileReader("src/test/resources/trigonometryMocks/cos.csv"))) {

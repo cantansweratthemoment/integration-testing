@@ -2,6 +2,7 @@ import functions.aClass.FunctionCalculator;
 import functions.function.Trigonometry;
 import functions.function.Logarithm;
 import functions.logarithm.Ln;
+import functions.trigonometry.Cos;
 
 import java.util.Scanner;
 
@@ -11,13 +12,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         double x = scanner.nextDouble();
         double eps = scanner.nextDouble();
-        //FunctionCalculator trigonometry = new Trigonometry(x, eps);
-        //FunctionCalculator logarithm = new Logarithm(x, eps);
+        Trigonometry trigonometry = new Trigonometry(x, eps);
+        Logarithm logarithm = new Logarithm(x, eps);
 
-        //System.out.println(logarithm.calculate());
-        //System.out.println(trigonometry.calculate());
 
-        Ln ln = new Ln();
-        System.out.println(ln.calculate(0.1, 0.0001));
+
+       Function function = new Function(logarithm, trigonometry);
+        System.out.println(function.calculate(x));
     }
 }

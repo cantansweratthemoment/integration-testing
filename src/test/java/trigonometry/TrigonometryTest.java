@@ -11,23 +11,14 @@ import java.math.BigDecimal;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TrigonometryTest {
-    private final Double accuracy = 0.01;
-    private final Cos cos;
-    private final Cot cot;
-    private final Csc csc;
-    private final Sec sec;
-    private final Sin sin;
-    private final Tan tan;
+    private final Double accuracy = 0.0001;
+    private final Cos cos = new Cos();
+    private final Cot cot = new Cot();
+    private final Csc csc = new Csc();
+    private final Sec sec = new Sec();
+    private final Sin sin = new Sin();
+    private final Tan tan = new Tan();
     private final CsvPrinter csvPrinter = new CsvPrinter();
-
-    public TrigonometryTest(Cos cos, Cot cot, Csc csc, Sec sec, Sin sin, Tan tan) {
-        this.cos = cos;
-        this.cot = cot;
-        this.csc = csc;
-        this.sec = sec;
-        this.sin = sin;
-        this.tan = tan;
-    }
 
     @ParameterizedTest
     @CsvFileSource(resources = "/trigonometryMocks/cos.csv")

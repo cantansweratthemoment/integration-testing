@@ -25,6 +25,10 @@ public abstract class FunctionCalculator {
         this.eps = eps;
     }
 
+    public FunctionCalculator() {
+
+    }
+
 
     public abstract BigDecimal calculate();
 }

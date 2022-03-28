@@ -11,6 +11,10 @@ public class Logarithm extends FunctionCalculator {
         super(x, eps);
     }
 
+    public Logarithm() {
+        super();
+    }
+
     @Override
     public BigDecimal calculate() {
         BigDecimal answer = new BigDecimal(0);

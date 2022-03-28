@@ -14,6 +14,10 @@ public class Trigonometry extends FunctionCalculator {
         super(x, eps);
     }
 
+    public Trigonometry() {
+
+    }
+
     @Override
     public BigDecimal calculate() throws ArithmeticException {
         BigDecimal answer = new BigDecimal(0);
