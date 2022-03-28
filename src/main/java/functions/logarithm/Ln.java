@@ -5,6 +5,8 @@ import java.math.RoundingMode;
 
 
 public class Ln {
+    public Ln() {
+    }
 
     public BigDecimal calculate(double x, double eps) {
 

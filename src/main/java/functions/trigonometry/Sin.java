@@ -3,7 +3,8 @@ package functions.trigonometry;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-import static functions.trigonometry.Fac.calculateFactorial;
+import static util.math.Fac.calculateFactorial;
+
 
 public class Sin {
     public BigDecimal calculateSin(double x, double eps) {
